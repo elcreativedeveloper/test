@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /*
+ * See: https://fonts.google.com/license/googlerestricted
+ */
+    /* cyrillic */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qE52i1dC.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* greek */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEl2i1dC.woff2) format('woff2');
+        unicode-range: U+0370-03FF;
+    }
+    /* vietnamese */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEV2i1dC.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qER2i1dC.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* cyrillic */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmxjtiu7.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* greek */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmtjtiu7.woff2) format('woff2');
+        unicode-range: U+0370-03FF;
+    }
+    /* vietnamese */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmdjtiu7.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmZjtiu7.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmhjtg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* cyrillic */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oPFTnmxjtiu7.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* greek */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oPFTnmtjtiu7.woff2) format('woff2');
+        unicode-range: U+0370-03FF;
+    }
+    /* vietnamese */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oPFTnmdjtiu7.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oPFTnmZjtiu7.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Google Sans Text';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/googlesanstext/v21/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oPFTnmhjtg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    .post_body h1 {
+        @apply mb-2 mt-0 text-4xl font-bold leading-[1.1];
+    }
+    .post_body h2 {
+        @apply mb-[10px] mt-6 text-2xl font-bold leading-[1.3];
+    }
+    .post_body h3 {
+        @apply mb-2 mt-[22px] text-xl font-bold leading-[1.6];
+    }
+    .post_body h4,
+    .post_body h5,
+    .post_body h6 {
+        @apply mb-[6px] mt-5 text-lg font-bold leading-[1.5];
+    }
+
+    .post_body h1 + *,
+    .post_body h2 + *,
+    .post_body h3 + *,
+    .post_body h4 + *,
+    .post_body h5 + *,
+    .post_body h6 + * {
+        @apply mt-0;
+    }
+
+    .post_body ol,
+    .post_body ul {
+        @apply pl-6;
+    }
+    .post_body ol {
+        @apply list-decimal;
+    }
+    .post_body ul {
+        @apply list-disc;
+    }
+    .post_body li {
+        @apply my-[5px];
+    }
+    .post_body ol > li {
+        @apply pl-[5px];
+    }
+    .post_body ul > li {
+        @apply pl-[5px];
+    }
+    .post_body ol > li::marker {
+        @apply font-normal text-gray-600;
+    }
+    .post_body ul > li::marker {
+        @apply font-normal text-gray-600;
+    }
+
+    .post_body blockquote {
+        @apply my-6 border-l-[3px] border-blue-600 bg-gray-100 py-[14px] pr-[14px] pl-[18px] italic;
+    }
+    .post_body blockquote p {
+        @apply first:mt-0 last:mb-0;
+    }
+
+    .post_body code,
+    .post_body kbd {
+        @apply whitespace-pre-wrap break-words rounded-md border py-[2px] px-2 text-sm font-medium;
+    }
+    .post_body pre {
+        @apply my-4 overflow-x-auto rounded-[4px] bg-gray-800 px-[18px] py-3 text-[13px] leading-[1.7] text-white;
+    }
+    .post_body pre code {
+        @apply whitespace-pre rounded-none border-0 border-transparent bg-transparent p-0 text-[13px] font-normal text-inherit dark:border-transparent;
+    }
+
+    .post_body hr {
+        @apply my-6 border border-t;
+    }
+
+    .post_body p {
+        @apply my-3;
+    }
+
+    .post_body a {
+        @apply text-blue-700 hover:underline;
+    }
+
+    .post_body figcaption {
+        @apply mt-4 text-xs leading-[1.4] text-gray-600;
+    }
+    .post_body figure > * {
+        @apply my-0;
+    }
+    .post_body img,
+    .post_body figure {
+        @apply my-4 mx-auto;
+    }
+    .post_body p > img {
+        @apply my-0;
+    }
+
+    .post_body > :first-child,
+    .post_body hr + * {
+        @apply mt-0;
+    }
+    .post_body > :last-child {
+        @apply mb-0;
+    }
+
+    /* Syntax Highlighter */
+    .post_body .hljs-change,
+    .post_body .hljs-flow,
+    .post_body .hljs-keyword,
+    .post_body .hljs-literal,
+    .post_body .hljs-strong,
+    .post_body .hljs-tag,
+    .post_body .hljs-tag .hljs-title,
+    .post_body .hljs-winutils,
+    .post_body .nginx .hljs-title,
+    .post_body .tex .hljs-special,
+    .post_body .hljs-attr,
+    .post_body .hljs-keyword,
+    .post_body .hljs-name,
+    .post_body .hljs-selector-tag {
+        @apply text-[#ff5f52];
+    }
+    .post_body .asciidoc .hljs-code,
+    .post_body .hljs .hljs-constant,
+    .post_body .markdown .hljs-code,
+    .post_body .hljs-attribute,
+    .post_body .hljs-link_label,
+    .post_body .hljs-regexp,
+    .post_body .hljs-symbol,
+    .post_body .hljs-symbol .hljs-string,
+    .post_body .hljs-value,
+    .post_body .hljs-attribute,
+    .post_body .hljs-symbol {
+        @apply text-[#8ff];
+    }
+    .post_body .hljs-class .hljs-title,
+    .post_body .hljs-code,
+    .post_body .hljs-header,
+    .post_body .hljs,
+    .post_body .hljs-subst,
+    .post_body .hljs-tag,
+    .post_body .hljs-class .hljs-title,
+    .post_body .hljs-params,
+    .post_body .hljs-emphasis,
+    .post_body .hljs-strong {
+        @apply text-white;
+    }
+    .post_body .apache .hljs-cbracket,
+    .post_body .apache .hljs-tag,
+    .post_body .django .hljs-filter .hljs-argument,
+    .post_body .django .hljs-template_tag,
+    .post_body .django .hljs-variable,
+    .post_body .hljs-addition,
+    .post_body .hljs-attr_selector,
+    .post_body .hljs-built_in,
+    .post_body .hljs-bullet,
+    .post_body .hljs-emphasis,
+    .post_body .hljs-envvar,
+    .post_body .hljs-link_url,
+    .post_body .hljs-name,
+    .post_body .hljs-pragma,
+    .post_body .hljs-preprocessor,
+    .post_body .hljs-prompt,
+    .post_body .hljs-pseudo,
+    .post_body .hljs-stream,
+    .post_body .hljs-string,
+    .post_body .hljs-subst,
+    .post_body .hljs-tag .hljs-value,
+    .post_body .hljs-title,
+    .post_body .hljs-type,
+    .post_body .ruby .hljs-class .hljs-parent,
+    .post_body .smalltalk .hljs-array,
+    .post_body .smalltalk .hljs-class,
+    .post_body .smalltalk .hljs-localvars,
+    .post_body .tex .hljs-command,
+    .post_body .hljs-code,
+    .post_body .hljs-section,
+    .post_body .hljs-selector-class,
+    .post_body .hljs-title {
+        @apply text-[#aed581];
+    }
+    .post_body .apache .hljs-tag,
+    .post_body .bash .hljs-variable,
+    .post_body .css .hljs-id,
+    .post_body .diff .hljs-header,
+    .post_body .hljs-chunk,
+    .post_body .hljs-doctag,
+    .post_body .hljs-header,
+    .post_body .hljs-keyword,
+    .post_body .hljs-literal,
+    .post_body .hljs-request,
+    .post_body .hljs-status,
+    .post_body .hljs-title,
+    .post_body .hljs-type,
+    .post_body .hljs-winutils,
+    .post_body .rsl .hljs-built_in,
+    .post_body .smalltalk .hljs-class,
+    .post_body .tex .hljs-special,
+    .post_body .vbscript .hljs-built_in,
+    .post_body .hljs-strong {
+        @apply font-bold;
+    }
+    .post_body .hljs-bullet,
+    .post_body .hljs-link,
+    .post_body .hljs-literal,
+    .post_body .hljs-number,
+    .post_body .hljs-quote,
+    .post_body .hljs-regexp {
+        @apply text-[#df78ef];
+    }
+    .post_body .hljs-emphasis {
+        @apply italic;
+    }
+    .post_body .hljs-addition,
+    .post_body .hljs-built_in,
+    .post_body .hljs-builtin-name,
+    .post_body .hljs-selector-attr,
+    .post_body .hljs-selector-id,
+    .post_body .hljs-selector-pseudo,
+    .post_body .hljs-string,
+    .post_body .hljs-template-variable,
+    .post_body .hljs-type,
+    .post_body .hljs-variable {
+        @apply text-[#ffd95a];
+    }
+    .post_body .hljs-comment,
+    .post_body .hljs-deletion,
+    .post_body .hljs-meta,
+    .post_body .apache .hljs-sqbracket,
+    .post_body .hljs-annotation,
+    .post_body .hljs-blockquote,
+    .post_body .hljs-comment,
+    .post_body .hljs-decorator,
+    .post_body .hljs-deletion,
+    .post_body .hljs-doctype,
+    .post_body .hljs-horizontal_rule,
+    .post_body .hljs-pi,
+    .post_body .hljs-shebang,
+    .post_body .smartquote,
+    .post_body .tex .hljs-formula {
+        @apply text-[#b4afa2];
+    }
+}
