@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply [-webkit-tap-highlight-color:transparent];
+}
+
+::placeholder {
+    @apply [color:inherit];
+}
+
+html {
+    @apply overflow-y-auto overflow-x-hidden scroll-smooth;
+}
+
 @layer utilities {
     /*
  * See: https://fonts.google.com/license/googlerestricted

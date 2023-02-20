@@ -35,7 +35,9 @@ const Home = ({ posts }) => {
             <article key={post.id} id={post.id} className="flex w-full flex-col items-center relative select-none justify-between overflow-hidden xl:rounded-lg xl:border rounded-none border-b xl:bg-white bg:transparent xl:mb-3 xl:p-3 mb-3 pb-3 last:mb-0 xl:last:mb-0">
               <div className="flex w-full items-center justify-between xl:flex-row flex-row">
                 <div className="flex w-full flex-col items-start justify-between xl:mr-3 mr-2">
-                  <Link href="#" alt={post.category[0]} className="mb-1 flex h-7 flex-row items-center justify-center text-sm font-medium no-underline text-gray-600 hover:text-blue-700"><span>{post.category[0]}</span></Link>
+                  {post.category && (
+                    <Link href="#" alt={post.category[0]} className="mb-1 flex h-7 flex-row items-center justify-center text-sm font-medium no-underline text-gray-600 hover:text-blue-700"><span>{post.category[0]}</span></Link>
+                  )}
                   <Link href={`/${encodeURIComponent(post.title.toLowerCase().replace(/\s/g, "-").replace(/[^a-zA-Z0-9-]/g, "_"))}`} alt={post.title} className="mb-1 text-lg hover:text-blue-700">
                     <h2 className="w-full font-bold">{post.title}</h2>
                   </Link>
@@ -80,7 +82,7 @@ export const getStaticProps = async () => {
 
   const posts = data.feed.entry.map((post) => ({
     id: post.id.$t.split(".").pop().replace("post-", ""),
-    category: post.category.map((category) => category.term),
+    category: post.category ? post.category.map((category) => category.term) : "",
     title: post.title.$t,
     published: post.published.$t,
     publishedAgo: formatDistance(new Date(post.published.$t), new Date(), { addSuffix: true, locale: id }),
@@ -92,7 +94,7 @@ export const getStaticProps = async () => {
       url: post.author[0].uri.$t,
       image: post.author[0].gd$image.src,
     },
-    thumbnail: post.media$thumbnail.url.replace(/\/s[0-9]+(\-c)?/, '/s600-c').replace(/=s[0-9]+(\-c)?/, '=s600-c').replace(/-h[0-9]+(\-c)?/, '').replace(/.*?:\/\//g, '//'),
+    thumbnail: post.media$thumbnail ? post.media$thumbnail.url.replace(/\/s[0-9]+(\-c)?/, '/s600-c').replace(/=s[0-9]+(\-c)?/, '=s600-c').replace(/-h[0-9]+(\-c)?/, '').replace(/.*?:\/\//g, '//') : "https://resources.blogblog.com/img/blank.gif",
     comments: post.thr$total.$t,
   }));
 
