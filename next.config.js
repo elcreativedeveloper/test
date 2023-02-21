@@ -10,6 +10,7 @@ const nextConfig = {
       'blogger.googleusercontent.com',
       'img1.blogblog.com',
       'lh3.googleusercontent.com',
+      'resources.blogblog.com',
     ]
   }
 }
