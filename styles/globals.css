@@ -15,9 +15,6 @@ html {
 }
 
 @layer utilities {
-    /*
- * See: https://fonts.google.com/license/googlerestricted
- */
     /* cyrillic */
     @font-face {
         font-family: 'Google Sans Text';

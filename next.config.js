@@ -8,11 +8,12 @@ const nextConfig = {
       '3.bp.blogspot.com',
       '4.bp.blogspot.com',
       'blogger.googleusercontent.com',
+      'img.youtube.com',
       'img1.blogblog.com',
       'lh3.googleusercontent.com',
       'resources.blogblog.com',
     ]
   }
 }
-
+ 
 module.exports = nextConfig
