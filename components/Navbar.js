@@ -8,10 +8,10 @@ const Navbar = () => {
 
     return (
         <header className="fixed top-0 z-30 flex w-full select-none flex-col items-center justify-center border bg-white">
-            <div className="flex min-h-[56px] w-full items-center justify-between p-2 lg:min-h-[64px]">
+            <div className="flex min-h-[56px] w-full items-center justify-between px-4 py-2 lg:min-h-[64px]">
                 <div className="flex w-full max-w-max flex-row items-center justify-start mr-2 lg:min-w-[200px]">
                     <div className="flex items-center justify-center">
-                        <Link href="/" className="inline-flex items-center justify-center">
+                        <Link href="/post" className="inline-flex items-center justify-center">
                             <div className="flex flex-col items-start justify-center leading-6">
                                 <div className="relative text-ellipsis text-lg font-medium line-clamp-1 leading-6">Materia Auth</div>
                                 <small className="relative text-ellipsis text-xs line-clamp-1">Dashboard</small>

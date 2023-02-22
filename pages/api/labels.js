@@ -2,8 +2,8 @@ import fetch from "node-fetch";
 import { metadata } from "@/data/Metadata";
 
 const handler = async (req, res) => {
-    const { startIndex, maxResults } = req.query;
-    const apiUrl = `${metadata.url}/feeds/posts/summary?start-index=${parseInt(startIndex)}&max-results=${parseInt(maxResults)}&alt=json`;
+    const { labelName, startIndex, maxResults } = req.query;
+    const apiUrl = `${metadata.url}/feeds/posts/summary/-/${encodeURIComponent(labelName)}?max-results=${maxResults}&start-index=${startIndex}&alt=json`;
 
     try {
         const response = await fetch(apiUrl);
@@ -26,12 +26,9 @@ const handler = async (req, res) => {
         }));
 
         res.setHeader("Access-Control-Allow-Origin", "*");
-        res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.status(200).json(posts);
     } catch (error) {
-        res.status(500).json({
-            error: "Internal Server Error"
-        });
+        res.status(500).json({ error: "Internal Server Error" });
     }
 };
 
