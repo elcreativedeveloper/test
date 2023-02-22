@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { formatDistance } from "date-fns";
 import { id } from "date-fns/locale";
 import DOMPurify from "dompurify";
-import { metadata } from "@/data/Metadata"
+import { Metadata } from "@/data/Metadata"
 
 const Post = ({ post }) => {
     const absoluteUrlMiddleware = (src) => {
@@ -124,7 +124,7 @@ const Post = ({ post }) => {
 export async function getServerSideProps({ params }) {
     const encodedTitle = params.id;
     const title = encodedTitle.replace(/-/g, " ").replace(/_/g, " ");
-    const res = await fetch(`${metadata.urlOrigin}feeds/posts/default?alt=json&q=${encodeURIComponent(title)}`);
+    const res = await fetch(`${Metadata.urlOrigin}feeds/posts/default?alt=json&q=${encodeURIComponent(title)}`);
     const data = await res.json();
 
     const post = {

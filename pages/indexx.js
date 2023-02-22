@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { formatDistance } from "date-fns";
 import { id } from "date-fns/locale";
 import Image from "next/image";
-import { metadata } from "@/data/Metadata"
+import { Metadata } from "@/data/Metadata"
 
 const Home = ({ posts }) => {
   const router = useRouter()
@@ -77,7 +77,7 @@ const Home = ({ posts }) => {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${metadata.urlOrigin}feeds/posts/summary?max-results=99999&start-index=1&alt=json`);
+  const res = await fetch(`${Metadata.url}feeds/posts/summary?max-results=99999&start-index=1&alt=json`);
   const data = await res.json();
 
   const posts = data.feed.entry.map((post) => ({
