@@ -4,6 +4,7 @@ import PostIndex from "@/components/Post/Posts";
 import React, { useState } from "react";
 import { Metadata } from "@/data/Metadata";
 import { getPosts } from "@/utils/getPosts"
+import Head from "next/head";
 
 const Posts = ({ initialData }) => {
     const [posts, setPosts] = useState(initialData);
@@ -40,6 +41,30 @@ const Posts = ({ initialData }) => {
 
     return (
         <>
+            <Head>
+                <title>Materia X Next</title>
+                <meta content='Material Design Multipurpose Blogger x Next.js Template Inspired by Google Material Design.' name='description' />
+                <meta content='Material Design Multipurpose Blogger x Next.js Template Inspired by Google Material Design.' name='keywords' />
+                <meta content='Material Design Multipurpose Blogger x Next.js Template Inspired by Google Material Design.' name='news_keywords' />
+                <meta content='Yasya El Hakim' name='author' />
+                <meta content='Yasya El Hakim' name='copyright' />
+                <meta content='en' name='language' />
+
+                <meta content="Materia X Next" property='og:site_name' />
+                <meta content='https://test-elca.vercel.app/' property='og:url' />
+                <meta content="Materia X Next" property='og:title' />
+                <meta content='en' property='og:locale' />
+                <meta content='website' property='og:type' />
+                <meta content='Material Design Multipurpose Blogger x Next.js Template Inspired by Google Material Design.' property='og:description' />
+                <meta content='/images/featured-image.jpg' property='og:image' />
+
+                <meta content="Materia X Next" name='twitter:title' />
+                <meta content='/images/featured-image.jpg' property='twitter:image' />
+                <meta content='Material Design Multipurpose Blogger x Next.js Template Inspired by Google Material Design.' property='twitter:description' />
+                <meta content='https://test-elca.vercel.app/' name='twitter:url' />
+                <meta content='https://test-elca.vercel.app/' name='twitter:domain' />
+                <meta content='summary_large_image' name='twitter:card'/>
+            </Head>
             <Navbar />
 
             <div className="mx-auto max-w-3xl pt-20 p-4">
